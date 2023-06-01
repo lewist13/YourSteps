@@ -6,14 +6,16 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct Home: View {
-    @State private var stepCount = 1000
+    @State private var stepCount = 2000
     @State private var activityLevel = "Sedentary"
     @State private var stepGoal = 5000
     @State private var currentAffirmation = ""
     let date = String(DateFormatter.localizedString(from: Date(), dateStyle: .medium, timeStyle: .none))
-
+    let healthStore = HKHealthStore()
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -64,7 +66,7 @@ struct Home: View {
                             .foregroundColor(.yellow)
                             .frame(width: 40.0, height: 40.0)
                         Text(currentAffirmation)
-                            .font(.title)
+                            .font(.title2)
                             .italic()
                             .fontWeight(.bold)
                             .multilineTextAlignment(.center)
@@ -83,6 +85,7 @@ struct Home: View {
             }
             .navigationTitle("YourSteps")
             .navigationBarTitleDisplayMode(.inline)
+            .onAppear(perform: requestAuthorization)
         }
     }
     
@@ -91,6 +94,27 @@ struct Home: View {
         let randomCategory = categories.randomElement()!
         let randomAffirmation = affirmations[randomCategory]?.randomElement()!
         currentAffirmation = randomAffirmation!
+    }
+    
+    func requestAuthorization() {
+        guard HKHealthStore.isHealthDataAvailable() else {
+            print("HealthKit is not available on this device")
+            return
+        }
+        
+        guard let stepCountType = HKObjectType.quantityType(forIdentifier: .stepCount),
+              let activeEnergyBurnedType = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned) else {
+            print("Unable to create the health data types")
+            return
+        }
+        
+        healthStore.requestAuthorization(toShare: [], read: [stepCountType, activeEnergyBurnedType]) { (success, error) in
+            if success {
+                print("HealthKit authorization received")
+            } else {
+                print("Failed to get authorization for HealthKit")
+            }
+        }
     }
 }
 
