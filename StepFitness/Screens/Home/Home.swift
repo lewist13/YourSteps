@@ -92,6 +92,9 @@ struct Home: View {
                 }
                 .padding()
             }
+            .refreshable {
+                fetchStepsCount()
+            }
             .navigationTitle("StepFitness")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear(perform: requestAuthorization)
