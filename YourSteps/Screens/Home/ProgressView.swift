@@ -10,12 +10,12 @@ import SwiftUI
 struct SectionedProgressView: View {
     @Binding var stepCount: Int
     
-    let thresholds = [(0, 2000), (2001, 5000), (5001, 10000), (10001, 15000)]
-    let labels = ["Sedentary", "Active", "Very Active", "Athletic"]
+    let thresholds = [(0, 4999), (5000, 7499), (7500, 9999), (10001, 12499), (12500, 100_000)]
+    let labels = ["Sedentary", "Low Active", "Somewhat Active", "Active", "Very Active"]
     
     var body: some View {
         ZStack {
-            ForEach(0..<4) { index in
+            ForEach(0..<5) { index in
                 SectionView(startAngle: angleForIndex(index), endAngle: angleForIndex(index + 1) - .degrees(1), color: colorForIndex(index))
             }
         }
