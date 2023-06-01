@@ -9,12 +9,21 @@ import SwiftUI
 import HealthKit
 
 struct Home: View {
-    @State private var stepCount = 2000
-    @State private var activityLevel = "Sedentary"
+    @State private var stepCount = 0
     @State private var stepGoal = 5000
     @State private var currentAffirmation = ""
+    let thresholdsAndLabels: [((Int, Int), String)]
     let date = String(DateFormatter.localizedString(from: Date(), dateStyle: .medium, timeStyle: .none))
     let healthStore = HKHealthStore()
+    
+    var activityLevel: String {
+        for (range, label) in thresholdsAndLabels {
+            if range.0 <= stepCount && stepCount <= range.1 {
+                return label
+            }
+        }
+        return "Unknown"
+    }
     
     var body: some View {
         NavigationView {
@@ -111,10 +120,38 @@ struct Home: View {
         healthStore.requestAuthorization(toShare: [], read: [stepCountType, activeEnergyBurnedType]) { (success, error) in
             if success {
                 print("HealthKit authorization received")
+                fetchHealthData()
             } else {
                 print("Failed to get authorization for HealthKit")
             }
         }
+    }
+    
+    func fetchHealthData() {
+        fetchStepsCount()
+    }
+    
+    func fetchStepsCount() {
+        let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
+        
+        let now = Date()
+        let startOfDay = Calendar.current.startOfDay(for: now)
+        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+        
+        let query = HKSampleQuery(sampleType: stepsQuantityType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { (query, samples, error) in
+            guard let samples = samples as? [HKQuantitySample] else { return }
+            
+            let totalSteps = samples.reduce(0) { (result, sample) in
+                let stepCount = sample.quantity.doubleValue(for: HKUnit.count())
+                return result + stepCount
+            }
+            
+            DispatchQueue.main.async {
+                self.stepCount = Int(totalSteps)
+            }
+        }
+        
+        healthStore.execute(query)
     }
 }
 
@@ -143,6 +180,6 @@ struct CardView<Content: View>: View {
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
+        Home(thresholdsAndLabels: [((7500, 9999), "Somewhat Active")])
     }
 }
