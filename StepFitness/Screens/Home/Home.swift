@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  YourSteps
+//  StepFitness
 //
 //  Created by TaeVon Lewis on 5/30/23.
 //
@@ -92,7 +92,7 @@ struct Home: View {
                 }
                 .padding()
             }
-            .navigationTitle("YourSteps")
+            .navigationTitle("StepFitness")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear(perform: requestAuthorization)
         }

@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B390F68B2A26C09200B5C92A /* YourStepsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F68A2A26C09200B5C92A /* YourStepsApp.swift */; };
+		B390F68B2A26C09200B5C92A /* StepFitnessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F68A2A26C09200B5C92A /* StepFitnessApp.swift */; };
 		B390F68D2A26C09200B5C92A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F68C2A26C09200B5C92A /* Home.swift */; };
 		B390F68F2A26C09300B5C92A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B390F68E2A26C09300B5C92A /* Assets.xcassets */; };
 		B390F6922A26C09300B5C92A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B390F6912A26C09300B5C92A /* Preview Assets.xcassets */; };
-		B390F69C2A26C09300B5C92A /* YourStepsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F69B2A26C09300B5C92A /* YourStepsTests.swift */; };
-		B390F6A62A26C09300B5C92A /* YourStepsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F6A52A26C09300B5C92A /* YourStepsUITests.swift */; };
-		B390F6A82A26C09300B5C92A /* YourStepsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F6A72A26C09300B5C92A /* YourStepsUITestsLaunchTests.swift */; };
+		B390F69C2A26C09300B5C92A /* StepFitnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F69B2A26C09300B5C92A /* StepFitnessTests.swift */; };
+		B390F6A62A26C09300B5C92A /* StepFitnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F6A52A26C09300B5C92A /* StepFitnessUITests.swift */; };
+		B390F6A82A26C09300B5C92A /* StepFitnessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F6A72A26C09300B5C92A /* StepFitnessUITestsLaunchTests.swift */; };
 		B390F6B72A26D96900B5C92A /* CrookedText in Frameworks */ = {isa = PBXBuildFile; productRef = B390F6B62A26D96900B5C92A /* CrookedText */; };
 		B390F6BB2A29105900B5C92A /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F6BA2A29105900B5C92A /* ProgressView.swift */; };
 		B390F6BD2A291C1800B5C92A /* Affirmations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F6BC2A291C1800B5C92A /* Affirmations.swift */; };
 		B390F6BF2A29360500B5C92A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B390F6BE2A29360500B5C92A /* .gitignore */; };
+		B39948E62A295463004C2E3A /* RefreshableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39948E52A295463004C2E3A /* RefreshableScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,21 +39,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B390F6872A26C09200B5C92A /* YourSteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourSteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B390F68A2A26C09200B5C92A /* YourStepsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourStepsApp.swift; sourceTree = "<group>"; };
+		B390F6872A26C09200B5C92A /* StepFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B390F68A2A26C09200B5C92A /* StepFitnessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFitnessApp.swift; sourceTree = "<group>"; };
 		B390F68C2A26C09200B5C92A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		B390F68E2A26C09300B5C92A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B390F6912A26C09300B5C92A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B390F6972A26C09300B5C92A /* YourStepsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourStepsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B390F69B2A26C09300B5C92A /* YourStepsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourStepsTests.swift; sourceTree = "<group>"; };
-		B390F6A12A26C09300B5C92A /* YourStepsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourStepsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B390F6A52A26C09300B5C92A /* YourStepsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourStepsUITests.swift; sourceTree = "<group>"; };
-		B390F6A72A26C09300B5C92A /* YourStepsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourStepsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B390F6972A26C09300B5C92A /* StepFitnessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StepFitnessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B390F69B2A26C09300B5C92A /* StepFitnessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFitnessTests.swift; sourceTree = "<group>"; };
+		B390F6A12A26C09300B5C92A /* StepFitnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StepFitnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B390F6A52A26C09300B5C92A /* StepFitnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFitnessUITests.swift; sourceTree = "<group>"; };
+		B390F6A72A26C09300B5C92A /* StepFitnessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFitnessUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B390F6B82A290DF200B5C92A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B390F6BA2A29105900B5C92A /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		B390F6BC2A291C1800B5C92A /* Affirmations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affirmations.swift; sourceTree = "<group>"; };
 		B390F6BE2A29360500B5C92A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		B390F6C02A2936D400B5C92A /* YourSteps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YourSteps.entitlements; sourceTree = "<group>"; };
+		B390F6C02A2936D400B5C92A /* StepFitness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StepFitness.entitlements; sourceTree = "<group>"; };
+		B39948E52A295463004C2E3A /* RefreshableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				B390F6BE2A29360500B5C92A /* .gitignore */,
-				B390F6892A26C09200B5C92A /* YourSteps */,
-				B390F69A2A26C09300B5C92A /* YourStepsTests */,
-				B390F6A42A26C09300B5C92A /* YourStepsUITests */,
+				B390F6892A26C09200B5C92A /* StepFitness */,
+				B390F69A2A26C09300B5C92A /* StepFitnessTests */,
+				B390F6A42A26C09300B5C92A /* StepFitnessUITests */,
 				B390F6882A26C09200B5C92A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,24 +97,24 @@
 		B390F6882A26C09200B5C92A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B390F6872A26C09200B5C92A /* YourSteps.app */,
-				B390F6972A26C09300B5C92A /* YourStepsTests.xctest */,
-				B390F6A12A26C09300B5C92A /* YourStepsUITests.xctest */,
+				B390F6872A26C09200B5C92A /* StepFitness.app */,
+				B390F6972A26C09300B5C92A /* StepFitnessTests.xctest */,
+				B390F6A12A26C09300B5C92A /* StepFitnessUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B390F6892A26C09200B5C92A /* YourSteps */ = {
+		B390F6892A26C09200B5C92A /* StepFitness */ = {
 			isa = PBXGroup;
 			children = (
-				B390F6C02A2936D400B5C92A /* YourSteps.entitlements */,
+				B390F6C02A2936D400B5C92A /* StepFitness.entitlements */,
 				B390F6B82A290DF200B5C92A /* Info.plist */,
 				B390F6B42A26C8CC00B5C92A /* Screens */,
-				B390F68A2A26C09200B5C92A /* YourStepsApp.swift */,
+				B390F68A2A26C09200B5C92A /* StepFitnessApp.swift */,
 				B390F68E2A26C09300B5C92A /* Assets.xcassets */,
 				B390F6902A26C09300B5C92A /* Preview Content */,
 			);
-			path = YourSteps;
+			path = StepFitness;
 			sourceTree = "<group>";
 		};
 		B390F6902A26C09300B5C92A /* Preview Content */ = {
@@ -123,21 +125,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B390F69A2A26C09300B5C92A /* YourStepsTests */ = {
+		B390F69A2A26C09300B5C92A /* StepFitnessTests */ = {
 			isa = PBXGroup;
 			children = (
-				B390F69B2A26C09300B5C92A /* YourStepsTests.swift */,
+				B390F69B2A26C09300B5C92A /* StepFitnessTests.swift */,
 			);
-			path = YourStepsTests;
+			path = StepFitnessTests;
 			sourceTree = "<group>";
 		};
-		B390F6A42A26C09300B5C92A /* YourStepsUITests */ = {
+		B390F6A42A26C09300B5C92A /* StepFitnessUITests */ = {
 			isa = PBXGroup;
 			children = (
-				B390F6A52A26C09300B5C92A /* YourStepsUITests.swift */,
-				B390F6A72A26C09300B5C92A /* YourStepsUITestsLaunchTests.swift */,
+				B390F6A52A26C09300B5C92A /* StepFitnessUITests.swift */,
+				B390F6A72A26C09300B5C92A /* StepFitnessUITestsLaunchTests.swift */,
 			);
-			path = YourStepsUITests;
+			path = StepFitnessUITests;
 			sourceTree = "<group>";
 		};
 		B390F6B42A26C8CC00B5C92A /* Screens */ = {
@@ -154,6 +156,7 @@
 				B390F68C2A26C09200B5C92A /* Home.swift */,
 				B390F6BA2A29105900B5C92A /* ProgressView.swift */,
 				B390F6BC2A291C1800B5C92A /* Affirmations.swift */,
+				B39948E52A295463004C2E3A /* RefreshableScrollView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -161,9 +164,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B390F6862A26C09200B5C92A /* YourSteps */ = {
+		B390F6862A26C09200B5C92A /* StepFitness */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B390F6AB2A26C09300B5C92A /* Build configuration list for PBXNativeTarget "YourSteps" */;
+			buildConfigurationList = B390F6AB2A26C09300B5C92A /* Build configuration list for PBXNativeTarget "StepFitness" */;
 			buildPhases = (
 				B390F6832A26C09200B5C92A /* Sources */,
 				B390F6842A26C09200B5C92A /* Frameworks */,
@@ -173,17 +176,17 @@
 			);
 			dependencies = (
 			);
-			name = YourSteps;
+			name = StepFitness;
 			packageProductDependencies = (
 				B390F6B62A26D96900B5C92A /* CrookedText */,
 			);
 			productName = YourSteps;
-			productReference = B390F6872A26C09200B5C92A /* YourSteps.app */;
+			productReference = B390F6872A26C09200B5C92A /* StepFitness.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B390F6962A26C09300B5C92A /* YourStepsTests */ = {
+		B390F6962A26C09300B5C92A /* StepFitnessTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B390F6AE2A26C09300B5C92A /* Build configuration list for PBXNativeTarget "YourStepsTests" */;
+			buildConfigurationList = B390F6AE2A26C09300B5C92A /* Build configuration list for PBXNativeTarget "StepFitnessTests" */;
 			buildPhases = (
 				B390F6932A26C09300B5C92A /* Sources */,
 				B390F6942A26C09300B5C92A /* Frameworks */,
@@ -194,14 +197,14 @@
 			dependencies = (
 				B390F6992A26C09300B5C92A /* PBXTargetDependency */,
 			);
-			name = YourStepsTests;
+			name = StepFitnessTests;
 			productName = YourStepsTests;
-			productReference = B390F6972A26C09300B5C92A /* YourStepsTests.xctest */;
+			productReference = B390F6972A26C09300B5C92A /* StepFitnessTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B390F6A02A26C09300B5C92A /* YourStepsUITests */ = {
+		B390F6A02A26C09300B5C92A /* StepFitnessUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B390F6B12A26C09300B5C92A /* Build configuration list for PBXNativeTarget "YourStepsUITests" */;
+			buildConfigurationList = B390F6B12A26C09300B5C92A /* Build configuration list for PBXNativeTarget "StepFitnessUITests" */;
 			buildPhases = (
 				B390F69D2A26C09300B5C92A /* Sources */,
 				B390F69E2A26C09300B5C92A /* Frameworks */,
@@ -212,9 +215,9 @@
 			dependencies = (
 				B390F6A32A26C09300B5C92A /* PBXTargetDependency */,
 			);
-			name = YourStepsUITests;
+			name = StepFitnessUITests;
 			productName = YourStepsUITests;
-			productReference = B390F6A12A26C09300B5C92A /* YourStepsUITests.xctest */;
+			productReference = B390F6A12A26C09300B5C92A /* StepFitnessUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -240,7 +243,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B390F6822A26C09200B5C92A /* Build configuration list for PBXProject "YourSteps" */;
+			buildConfigurationList = B390F6822A26C09200B5C92A /* Build configuration list for PBXProject "StepFitness" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -256,9 +259,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B390F6862A26C09200B5C92A /* YourSteps */,
-				B390F6962A26C09300B5C92A /* YourStepsTests */,
-				B390F6A02A26C09300B5C92A /* YourStepsUITests */,
+				B390F6862A26C09200B5C92A /* StepFitness */,
+				B390F6962A26C09300B5C92A /* StepFitnessTests */,
+				B390F6A02A26C09300B5C92A /* StepFitnessUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -297,7 +300,8 @@
 			files = (
 				B390F6BD2A291C1800B5C92A /* Affirmations.swift in Sources */,
 				B390F68D2A26C09200B5C92A /* Home.swift in Sources */,
-				B390F68B2A26C09200B5C92A /* YourStepsApp.swift in Sources */,
+				B39948E62A295463004C2E3A /* RefreshableScrollView.swift in Sources */,
+				B390F68B2A26C09200B5C92A /* StepFitnessApp.swift in Sources */,
 				B390F6BB2A29105900B5C92A /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B390F69C2A26C09300B5C92A /* YourStepsTests.swift in Sources */,
+				B390F69C2A26C09300B5C92A /* StepFitnessTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,8 +318,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B390F6A62A26C09300B5C92A /* YourStepsUITests.swift in Sources */,
-				B390F6A82A26C09300B5C92A /* YourStepsUITestsLaunchTests.swift in Sources */,
+				B390F6A62A26C09300B5C92A /* StepFitnessUITests.swift in Sources */,
+				B390F6A82A26C09300B5C92A /* StepFitnessUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,12 +328,12 @@
 /* Begin PBXTargetDependency section */
 		B390F6992A26C09300B5C92A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B390F6862A26C09200B5C92A /* YourSteps */;
+			target = B390F6862A26C09200B5C92A /* StepFitness */;
 			targetProxy = B390F6982A26C09300B5C92A /* PBXContainerItemProxy */;
 		};
 		B390F6A32A26C09300B5C92A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B390F6862A26C09200B5C92A /* YourSteps */;
+			target = B390F6862A26C09200B5C92A /* StepFitness */;
 			targetProxy = B390F6A22A26C09300B5C92A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -455,15 +459,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = YourSteps/YourSteps.entitlements;
+				CODE_SIGN_ENTITLEMENTS = StepFitness/StepFitness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"YourSteps/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"StepFitness/Preview Content\"";
 				DEVELOPMENT_TEAM = XFG5L8LD8A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = YourSteps/Info.plist;
+				INFOPLIST_FILE = StepFitness/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "We need access to your step count and active energy burned to provide your daily progress.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need access to your step count and active energy burned to provide your daily progress.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We need access to your step count and active energy burned to provide your daily progress.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -475,7 +482,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "TaeVon-Lewis.YourSteps";
+				PRODUCT_BUNDLE_IDENTIFIER = "TaeVon-Lewis.StepFitness";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -489,15 +496,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = YourSteps/YourSteps.entitlements;
+				CODE_SIGN_ENTITLEMENTS = StepFitness/StepFitness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"YourSteps/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"StepFitness/Preview Content\"";
 				DEVELOPMENT_TEAM = XFG5L8LD8A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = YourSteps/Info.plist;
+				INFOPLIST_FILE = StepFitness/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "We need access to your step count and active energy burned to provide your daily progress.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need access to your step count and active energy burned to provide your daily progress.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We need access to your step count and active energy burned to provide your daily progress.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -509,7 +519,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "TaeVon-Lewis.YourSteps";
+				PRODUCT_BUNDLE_IDENTIFIER = "TaeVon-Lewis.StepFitness";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -528,12 +538,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "TaeVon-Lewis.YourStepsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "TaeVon-Lewis.StepFitnessTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YourSteps.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YourSteps";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StepFitness.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StepFitness";
 			};
 			name = Debug;
 		};
@@ -548,12 +558,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "TaeVon-Lewis.YourStepsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "TaeVon-Lewis.StepFitnessTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YourSteps.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YourSteps";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StepFitness.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StepFitness";
 			};
 			name = Release;
 		};
@@ -566,12 +576,12 @@
 				DEVELOPMENT_TEAM = XFG5L8LD8A;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "TaeVon-Lewis.YourStepsUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "TaeVon-Lewis.StepFitnessUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = YourSteps;
+				TEST_TARGET_NAME = StepFitness;
 			};
 			name = Debug;
 		};
@@ -584,19 +594,19 @@
 				DEVELOPMENT_TEAM = XFG5L8LD8A;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "TaeVon-Lewis.YourStepsUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "TaeVon-Lewis.StepFitnessUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = YourSteps;
+				TEST_TARGET_NAME = StepFitness;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B390F6822A26C09200B5C92A /* Build configuration list for PBXProject "YourSteps" */ = {
+		B390F6822A26C09200B5C92A /* Build configuration list for PBXProject "StepFitness" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B390F6A92A26C09300B5C92A /* Debug */,
@@ -605,7 +615,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B390F6AB2A26C09300B5C92A /* Build configuration list for PBXNativeTarget "YourSteps" */ = {
+		B390F6AB2A26C09300B5C92A /* Build configuration list for PBXNativeTarget "StepFitness" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B390F6AC2A26C09300B5C92A /* Debug */,
@@ -614,7 +624,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B390F6AE2A26C09300B5C92A /* Build configuration list for PBXNativeTarget "YourStepsTests" */ = {
+		B390F6AE2A26C09300B5C92A /* Build configuration list for PBXNativeTarget "StepFitnessTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B390F6AF2A26C09300B5C92A /* Debug */,
@@ -623,7 +633,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B390F6B12A26C09300B5C92A /* Build configuration list for PBXNativeTarget "YourStepsUITests" */ = {
+		B390F6B12A26C09300B5C92A /* Build configuration list for PBXNativeTarget "StepFitnessUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B390F6B22A26C09300B5C92A /* Debug */,

@@ -1,13 +1,13 @@
 //
-//  YourStepsUITests.swift
-//  YourStepsUITests
+//  StepFitnessUITests.swift
+//  StepFitnessUITests
 //
 //  Created by TaeVon Lewis on 5/30/23.
 //
 
 import XCTest
 
-final class YourStepsUITests: XCTestCase {
+final class StepFitnessUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

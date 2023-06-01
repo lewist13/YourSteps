@@ -1,6 +1,6 @@
 //
 //  Affirmations.",swift
-//  YourSteps
+//  StepFitness
 //
 //  Created by TaeVon Lewis on 6/1/23.",
 //

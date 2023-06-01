@@ -1,6 +1,6 @@
 //
-//  YourStepsApp.swift
-//  YourSteps
+//  StepFitnessApp.swift
+//  StepFitness
 //
 //  Created by TaeVon Lewis on 5/30/23.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct YourStepsApp: App {
+struct StepFitnessApp: App {
     var body: some Scene {
         WindowGroup {
             Home(thresholdsAndLabels: [

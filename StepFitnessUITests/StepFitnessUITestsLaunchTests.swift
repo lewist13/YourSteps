@@ -1,13 +1,13 @@
 //
-//  YourStepsUITestsLaunchTests.swift
-//  YourStepsUITests
+//  StepFitnessUITestsLaunchTests.swift
+//  StepFitnessUITests
 //
 //  Created by TaeVon Lewis on 5/30/23.
 //
 
 import XCTest
 
-final class YourStepsUITestsLaunchTests: XCTestCase {
+final class StepFitnessUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
