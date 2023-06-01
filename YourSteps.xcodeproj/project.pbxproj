@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		B390F68B2A26C09200B5C92A /* YourStepsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F68A2A26C09200B5C92A /* YourStepsApp.swift */; };
-		B390F68D2A26C09200B5C92A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F68C2A26C09200B5C92A /* ContentView.swift */; };
+		B390F68D2A26C09200B5C92A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F68C2A26C09200B5C92A /* Home.swift */; };
 		B390F68F2A26C09300B5C92A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B390F68E2A26C09300B5C92A /* Assets.xcassets */; };
 		B390F6922A26C09300B5C92A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B390F6912A26C09300B5C92A /* Preview Assets.xcassets */; };
 		B390F69C2A26C09300B5C92A /* YourStepsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F69B2A26C09300B5C92A /* YourStepsTests.swift */; };
 		B390F6A62A26C09300B5C92A /* YourStepsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F6A52A26C09300B5C92A /* YourStepsUITests.swift */; };
 		B390F6A82A26C09300B5C92A /* YourStepsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F6A72A26C09300B5C92A /* YourStepsUITestsLaunchTests.swift */; };
+		B390F6B72A26D96900B5C92A /* CrookedText in Frameworks */ = {isa = PBXBuildFile; productRef = B390F6B62A26D96900B5C92A /* CrookedText */; };
+		B390F6BB2A29105900B5C92A /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F6BA2A29105900B5C92A /* ProgressView.swift */; };
+		B390F6BD2A291C1800B5C92A /* Affirmations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F6BC2A291C1800B5C92A /* Affirmations.swift */; };
+		B390F6BF2A29360500B5C92A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B390F6BE2A29360500B5C92A /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		B390F6872A26C09200B5C92A /* YourSteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourSteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B390F68A2A26C09200B5C92A /* YourStepsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourStepsApp.swift; sourceTree = "<group>"; };
-		B390F68C2A26C09200B5C92A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B390F68C2A26C09200B5C92A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		B390F68E2A26C09300B5C92A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B390F6912A26C09300B5C92A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B390F6972A26C09300B5C92A /* YourStepsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourStepsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +48,10 @@
 		B390F6A12A26C09300B5C92A /* YourStepsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourStepsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B390F6A52A26C09300B5C92A /* YourStepsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourStepsUITests.swift; sourceTree = "<group>"; };
 		B390F6A72A26C09300B5C92A /* YourStepsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourStepsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B390F6B82A290DF200B5C92A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B390F6BA2A29105900B5C92A /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		B390F6BC2A291C1800B5C92A /* Affirmations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affirmations.swift; sourceTree = "<group>"; };
+		B390F6BE2A29360500B5C92A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B390F6B72A26D96900B5C92A /* CrookedText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +83,7 @@
 		B390F67E2A26C09200B5C92A = {
 			isa = PBXGroup;
 			children = (
+				B390F6BE2A29360500B5C92A /* .gitignore */,
 				B390F6892A26C09200B5C92A /* YourSteps */,
 				B390F69A2A26C09300B5C92A /* YourStepsTests */,
 				B390F6A42A26C09300B5C92A /* YourStepsUITests */,
@@ -94,8 +104,9 @@
 		B390F6892A26C09200B5C92A /* YourSteps */ = {
 			isa = PBXGroup;
 			children = (
+				B390F6B82A290DF200B5C92A /* Info.plist */,
+				B390F6B42A26C8CC00B5C92A /* Screens */,
 				B390F68A2A26C09200B5C92A /* YourStepsApp.swift */,
-				B390F68C2A26C09200B5C92A /* ContentView.swift */,
 				B390F68E2A26C09300B5C92A /* Assets.xcassets */,
 				B390F6902A26C09300B5C92A /* Preview Content */,
 			);
@@ -127,6 +138,24 @@
 			path = YourStepsUITests;
 			sourceTree = "<group>";
 		};
+		B390F6B42A26C8CC00B5C92A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B390F6B92A290E7B00B5C92A /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B390F6B92A290E7B00B5C92A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B390F68C2A26C09200B5C92A /* Home.swift */,
+				B390F6BA2A29105900B5C92A /* ProgressView.swift */,
+				B390F6BC2A291C1800B5C92A /* Affirmations.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +172,9 @@
 			dependencies = (
 			);
 			name = YourSteps;
+			packageProductDependencies = (
+				B390F6B62A26D96900B5C92A /* CrookedText */,
+			);
 			productName = YourSteps;
 			productReference = B390F6872A26C09200B5C92A /* YourSteps.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +247,9 @@
 				Base,
 			);
 			mainGroup = B390F67E2A26C09200B5C92A;
+			packageReferences = (
+				B390F6B52A26D96900B5C92A /* XCRemoteSwiftPackageReference "CrookedText" */,
+			);
 			productRefGroup = B390F6882A26C09200B5C92A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B390F6922A26C09300B5C92A /* Preview Assets.xcassets in Resources */,
+				B390F6BF2A29360500B5C92A /* .gitignore in Resources */,
 				B390F68F2A26C09300B5C92A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B390F68D2A26C09200B5C92A /* ContentView.swift in Sources */,
+				B390F6BD2A291C1800B5C92A /* Affirmations.swift in Sources */,
+				B390F68D2A26C09200B5C92A /* Home.swift in Sources */,
 				B390F68B2A26C09200B5C92A /* YourStepsApp.swift in Sources */,
+				B390F6BB2A29105900B5C92A /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +437,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -414,17 +452,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YourSteps/Preview Content\"";
 				DEVELOPMENT_TEAM = XFG5L8LD8A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YourSteps/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -443,17 +484,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"YourSteps/Preview Content\"";
 				DEVELOPMENT_TEAM = XFG5L8LD8A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YourSteps/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +627,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B390F6B52A26D96900B5C92A /* XCRemoteSwiftPackageReference "CrookedText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/duemunk/CrookedText";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B390F6B62A26D96900B5C92A /* CrookedText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B390F6B52A26D96900B5C92A /* XCRemoteSwiftPackageReference "CrookedText" */;
+			productName = CrookedText;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B390F67F2A26C09200B5C92A /* Project object */;
 }

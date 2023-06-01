@@ -11,7 +11,7 @@ import SwiftUI
 struct YourStepsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Home()
         }
     }
 }
