@@ -18,7 +18,6 @@
 		B390F6BB2A29105900B5C92A /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F6BA2A29105900B5C92A /* ProgressView.swift */; };
 		B390F6BD2A291C1800B5C92A /* Affirmations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390F6BC2A291C1800B5C92A /* Affirmations.swift */; };
 		B390F6BF2A29360500B5C92A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B390F6BE2A29360500B5C92A /* .gitignore */; };
-		B39948E62A295463004C2E3A /* RefreshableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39948E52A295463004C2E3A /* RefreshableScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		B390F6BC2A291C1800B5C92A /* Affirmations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affirmations.swift; sourceTree = "<group>"; };
 		B390F6BE2A29360500B5C92A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B390F6C02A2936D400B5C92A /* StepFitness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StepFitness.entitlements; sourceTree = "<group>"; };
-		B39948E52A295463004C2E3A /* RefreshableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +154,6 @@
 				B390F68C2A26C09200B5C92A /* Home.swift */,
 				B390F6BA2A29105900B5C92A /* ProgressView.swift */,
 				B390F6BC2A291C1800B5C92A /* Affirmations.swift */,
-				B39948E52A295463004C2E3A /* RefreshableScrollView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -300,7 +297,6 @@
 			files = (
 				B390F6BD2A291C1800B5C92A /* Affirmations.swift in Sources */,
 				B390F68D2A26C09200B5C92A /* Home.swift in Sources */,
-				B39948E62A295463004C2E3A /* RefreshableScrollView.swift in Sources */,
 				B390F68B2A26C09200B5C92A /* StepFitnessApp.swift in Sources */,
 				B390F6BB2A29105900B5C92A /* ProgressView.swift in Sources */,
 			);
