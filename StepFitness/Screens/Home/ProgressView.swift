@@ -48,13 +48,15 @@ struct SectionView: View {
     
     var body: some View {
         let ringWidth: CGFloat = 20
-        Path { path in
-            path.addArc(center: .zero, radius: 150, startAngle: startAngle, endAngle: endAngle, clockwise: false)
+        GeometryReader { geometry in
+            let radius = min(geometry.size.width, geometry.size.height) / 2
+            Path { path in
+                path.addArc(center: CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2), radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
+            }
+            .stroke(AngularGradient(gradient: gradient, center: .center, startAngle: startAngle, endAngle: endAngle), lineWidth: ringWidth)
+            .shadow(color: color.opacity(0.5), radius: 5, x: 5, y: 5)
+            .frame(width: geometry.size.width, height: geometry.size.height)
         }
-        .stroke(AngularGradient(gradient: gradient, center: .center, startAngle: startAngle, endAngle: endAngle), lineWidth: ringWidth)
-        .shadow(color: color.opacity(0.5), radius: 5, x: 5, y: 5)
-        .padding(EdgeInsets(top: 150, leading: 100, bottom: 0, trailing: 0))
-        .frame(width: 200, height: 200)
     }
 }
 

@@ -26,86 +26,96 @@ struct Home: View {
         }
         return "Unknown"
     }
-    
+
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(spacing: 30) {
-                    ZStack {
-                        SectionedProgressView(stepCount: $stepCount)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 100, trailing: 0))
-                        VStack {
-                            Text(date)
-                                .font(.largeTitle)
-                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                            Text("\(activityLevel)")
-                                .font(.title)
-                                .foregroundColor(.blue)
+            GeometryReader { outerGeometry in
+                ScrollView {
+                    VStack(spacing: outerGeometry.size.height * -0.05) {
+                        GeometryReader { innerGeometry in
+                            ZStack {
+                                SectionedProgressView(stepCount: $stepCount)
+                                    .frame(width: innerGeometry.size.width * 0.8, height: innerGeometry.size.width * 0.8)
+                                VStack {
+                                    Text(date)
+                                        .font(.largeTitle)
+                                    Text("\(activityLevel)")
+                                        .font(.title)
+                                        .foregroundColor(.blue)
+                                }
+                                .frame(width: innerGeometry.size.width * 0.8, height: innerGeometry.size.width * 0.8)
+                            }
+                            .padding([.leading], innerGeometry.size.width * 0.1)
                         }
-                    }
-                    HStack(spacing: 20) {
-                        CardView {
-                            VStack {
-                                Text("Steps")
-                                    .font(.title3)
-                                Text("\(stepCount)")
-                                    .font(.title)
+                        .aspectRatio(1, contentMode: .fit)
+                        
+                        VStack(spacing: outerGeometry.size.height * 0.21) {
+                            HStack {
+                                CardView {
+                                    VStack {
+                                        Text("Steps")
+                                            .font(.title3)
+                                        Text("\(stepCount)")
+                                            .font(.title)
+                                            .foregroundColor(.blue)
+                                    }
+                                }
+                                CardView {
+                                    VStack {
+                                        Text("Step Goal")
+                                            .font(.title3)
+                                        Text("\(stepGoal)")
+                                            .font(.title)
+                                            .foregroundColor(.blue)
+                                    }
+                                }
+                            }
+                            
+                            HStack(spacing: outerGeometry.size.height * 0.01) {
+                                CardView {
+                                    VStack {
+                                        Text("Active Energy")
+                                            .font(.title3)
+                                        Text(String(format: "%.1f cal", activeEnergy))
+                                            .font(.title)
+                                            .foregroundColor(.blue)
+                                    }
+                                }
+                                CardView {
+                                    VStack {
+                                        Text("Walk/Run Distance")
+                                            .font(.title3)
+                                        Text(String(format: "%.2f mi", walkRunDistance))
+                                            .font(.title)
+                                            .foregroundColor(.blue)
+                                    }
+                                }
+                            }
+                            HStack {
+                                Image(systemName: "sparkles")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .foregroundColor(.yellow)
+                                    .frame(width: 40.0, height: 40.0)
+                                Text(currentAffirmation)
+                                    .font(.title2)
+                                    .italic()
+                                    .fontWeight(.bold)
+                                    .multilineTextAlignment(.center)
                                     .foregroundColor(.blue)
+                                    .shadow(color: .gray, radius: 2, x: 2, y: 2)
+                                    .onAppear(perform: updateAffirmation)
+                                Image(systemName: "sparkles")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .foregroundColor(.yellow)
+                                    .frame(width: 40.0, height: 40.0)
                             }
                         }
-                        CardView {
-                            VStack {
-                                Text("Step Goal")
-                                    .font(.title3)
-                                Text("\(stepGoal)")
-                                    .font(.title)
-                                    .foregroundColor(.blue)
-                            }
-                        }
+                        .padding(.horizontal)
                     }
-                    HStack(spacing: 20) {
-                        CardView {
-                            VStack {
-                                Text("Active Energy")
-                                    .font(.title3)
-                                Text(String(format: "%.1f cal", activeEnergy))
-                                    .font(.title)
-                                    .foregroundColor(.blue)
-                            }
-                        }
-                        CardView {
-                            VStack {
-                                Text("Walk/Run Distance")
-                                    .font(.title3)
-                                Text(String(format: "%.2f mi", walkRunDistance))
-                                    .font(.title)
-                                    .foregroundColor(.blue)
-                            }
-                        }
-                    }
-                    HStack {
-                        Image(systemName: "sparkles")
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundColor(.yellow)
-                            .frame(width: 40.0, height: 40.0)
-                        Text(currentAffirmation)
-                            .font(.title2)
-                            .italic()
-                            .fontWeight(.bold)
-                            .multilineTextAlignment(.center)
-                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-                            .foregroundColor(.blue)
-                            .shadow(color: .gray, radius: 2, x: 2, y: 2)
-                            .onAppear(perform: updateAffirmation)
-                        Image(systemName: "sparkles")
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundColor(.yellow)
-                            .frame(width: 40.0, height: 40.0)
-                    }
+                    .padding()
                 }
-                .padding()
             }
             .refreshable {
                 fetchHealthData()
@@ -115,6 +125,8 @@ struct Home: View {
             .onAppear(perform: requestAuthorization)
         }
     }
+
+
     
     func updateAffirmation() {
         let categories = Array(affirmations.keys)
@@ -229,18 +241,19 @@ struct CardView<Content: View>: View {
     }
     
     var body: some View {
-        content
-            .frame(width: 175, height: 175)
-            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-            .background(
-                LinearGradient(gradient: Gradient(colors: [Color.white, Color.white.opacity(0.8)]), startPoint: .top, endPoint: .bottom)
-            )
-            .cornerRadius(10)
-            .shadow(color: Color.black.opacity(0.3), radius: 10, x: 2, y: 2)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.blue, lineWidth: 2)
-            )
+        GeometryReader { geometry in
+            content
+                .frame(width: geometry.size.width * 0.99, height: geometry.size.height * 15)
+                .background(
+                    LinearGradient(gradient: Gradient(colors: [Color.white, Color.white.opacity(0.8)]), startPoint: .top, endPoint: .bottom)
+                )
+                .cornerRadius(10)
+                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 2, y: 2)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.blue, lineWidth: 2)
+                )
+        }
     }
 }
 
