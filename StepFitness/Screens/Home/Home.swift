@@ -11,6 +11,8 @@ import HealthKit
 struct Home: View {
     @State private var stepCount = 0
     @State private var stepGoal = 5000
+    @State private var activeEnergy = 0.0
+    @State private var walkRunDistance = 0.0
     @State private var currentAffirmation = ""
     let thresholdsAndLabels: [((Int, Int), String)]
     let date = String(DateFormatter.localizedString(from: Date(), dateStyle: .medium, timeStyle: .none))
@@ -32,16 +34,20 @@ struct Home: View {
                     ZStack {
                         SectionedProgressView(stepCount: $stepCount)
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 100, trailing: 0))
-                        Text(date)
-                            .font(.largeTitle)
-                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        VStack {
+                            Text(date)
+                                .font(.largeTitle)
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                            Text("\(activityLevel)")
+                                .font(.title)
+                                .foregroundColor(.blue)
+                        }
                     }
                     HStack(spacing: 20) {
                         CardView {
                             VStack {
                                 Text("Steps")
-                                    .font(.title2)
-                                    .underline(true, color: .black)
+                                    .font(.title3)
                                 Text("\(stepCount)")
                                     .font(.title)
                                     .foregroundColor(.blue)
@@ -49,23 +55,32 @@ struct Home: View {
                         }
                         CardView {
                             VStack {
-                                Text("Activity Level")
-                                    .font(.title2)
-                                    .underline(true, color: .black)
-                                Text("\(activityLevel)")
+                                Text("Step Goal")
+                                    .font(.title3)
+                                Text("\(stepGoal)")
                                     .font(.title)
                                     .foregroundColor(.blue)
                             }
                         }
                     }
-                    CardView {
-                        VStack {
-                            Text("Daily Goal")
-                                .font(.title2)
-                                .underline(true, color: .black)
-                            Text("\(stepGoal)")
-                                .font(.title)
-                                .foregroundColor(.blue)
+                    HStack(spacing: 20) {
+                        CardView {
+                            VStack {
+                                Text("Active Energy")
+                                    .font(.title3)
+                                Text(String(format: "%.1f cal", activeEnergy))
+                                    .font(.title)
+                                    .foregroundColor(.blue)
+                            }
+                        }
+                        CardView {
+                            VStack {
+                                Text("Walk/Run Distance")
+                                    .font(.title3)
+                                Text(String(format: "%.2f mi", walkRunDistance))
+                                    .font(.title)
+                                    .foregroundColor(.blue)
+                            }
                         }
                     }
                     HStack {
@@ -93,9 +108,9 @@ struct Home: View {
                 .padding()
             }
             .refreshable {
-                fetchStepsCount()
+                fetchHealthData()
             }
-            .navigationTitle("StepFitness")
+            .navigationTitle("Today's Stats")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear(perform: requestAuthorization)
         }
@@ -132,6 +147,8 @@ struct Home: View {
     
     func fetchHealthData() {
         fetchStepsCount()
+        fetchActiveEnergy()
+        fetchWalkRunDistance()
     }
     
     func fetchStepsCount() {
@@ -156,6 +173,52 @@ struct Home: View {
         
         healthStore.execute(query)
     }
+    
+    func fetchActiveEnergy() {
+        let activeEnergyQuantityType = HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!
+        
+        let now = Date()
+        let startOfDay = Calendar.current.startOfDay(for: now)
+        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+        
+        let query = HKSampleQuery(sampleType: activeEnergyQuantityType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { (query, samples, error) in
+            guard let samples = samples as? [HKQuantitySample] else { return }
+            
+            let totalActiveEnergy = samples.reduce(0) { (result, sample) in
+                let activeEnergy = sample.quantity.doubleValue(for: HKUnit.kilocalorie())
+                return result + activeEnergy
+            }
+            
+            DispatchQueue.main.async {
+                self.activeEnergy = Double(totalActiveEnergy)
+            }
+        }
+        
+        healthStore.execute(query)
+    }
+    
+    func fetchWalkRunDistance() {
+        let walkRunDistanceQuantityType = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)!
+        
+        let now = Date()
+        let startOfDay = Calendar.current.startOfDay(for: now)
+        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+        
+        let query = HKSampleQuery(sampleType: walkRunDistanceQuantityType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { (query, samples, error) in
+            guard let samples = samples as? [HKQuantitySample] else { return }
+            
+            let totalWalkRunDistance = samples.reduce(0) { (result, sample) in
+                let walkRunDistance = sample.quantity.doubleValue(for: HKUnit.meter())
+                return result + walkRunDistance
+            }
+            
+            DispatchQueue.main.async {
+                self.walkRunDistance = totalWalkRunDistance / 1609.34
+            }
+        }
+        
+        healthStore.execute(query)
+    }
 }
 
 struct CardView<Content: View>: View {
@@ -167,7 +230,7 @@ struct CardView<Content: View>: View {
     
     var body: some View {
         content
-            .frame(width: 150, height: 150)
+            .frame(width: 175, height: 175)
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
             .background(
                 LinearGradient(gradient: Gradient(colors: [Color.white, Color.white.opacity(0.8)]), startPoint: .top, endPoint: .bottom)
