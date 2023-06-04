@@ -10,13 +10,17 @@ import HealthKit
 
 struct Home: View {
     @State private var stepCount = 0
-    @State private var stepGoal = 5000
+    @State private var stepGoal = 0
+    @State private var tempStepGoal = 0
+    @State private var showPicker = false
     @State private var activeEnergy = 0.0
     @State private var walkRunDistance = 0.0
     @State private var currentAffirmation = ""
-    let thresholdsAndLabels: [((Int, Int), String)]
-    let date = String(DateFormatter.localizedString(from: Date(), dateStyle: .medium, timeStyle: .none))
+    
     let healthStore = HKHealthStore()
+    let thresholdsAndLabels: [((Int, Int), String)]
+    let stepGoals: [Int] = Array(stride(from: 1000, through: 20000, by: 1000))
+    let date = String(DateFormatter.localizedString(from: Date(), dateStyle: .medium, timeStyle: .none))
     
     var activityLevel: String {
         for (range, label) in thresholdsAndLabels {
@@ -69,8 +73,37 @@ struct Home: View {
                                             .foregroundColor(.blue)
                                     }
                                 }
+                                .onTapGesture {
+                                    tempStepGoal = stepGoal
+                                    showPicker.toggle()
+                                }
+                                .sheet(isPresented: $showPicker) {
+                                    VStack {
+                                        Picker(selection: $tempStepGoal, label: Text("Step Goal")) {
+                                            ForEach(stepGoals, id: \.self) { goal in
+                                                Text("\(goal)").tag(goal)
+                                            }
+                                        }
+                                        .pickerStyle(WheelPickerStyle())
+                                        .labelsHidden()
+                                        
+                                        Button(action: {
+                                            stepGoal = tempStepGoal
+                                            showPicker.toggle()
+                                        }) {
+                                            Text("Confirm")
+                                                .font(.title)
+                                                .padding()
+                                                .frame(maxWidth: .infinity)
+                                                .background(Color.blue)
+                                                .foregroundColor(.white)
+                                                .cornerRadius(10)
+                                        }
+                                        .padding()
+                                    }
+                                    .frame(width: 300, height: 300)
+                                }
                             }
-                            
                             HStack(spacing: outerGeometry.size.height * 0.01) {
                                 CardView {
                                     VStack {
